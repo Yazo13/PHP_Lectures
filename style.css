@@ -1,0 +1,21 @@
+.container {
+    border: 1px solid black;
+    padding: 10px;
+    width: 40%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.row {
+    display: flex;
+    justify-content: space-evenly;
+}
+.button{
+    text-align: center;
+}
+button{
+    margin-top: 20px;
+    height: 30px;
+    width: 20%;
+}
