@@ -1,7 +1,12 @@
-<?php 
-    include "questions.php" ;
-    $indices = range(0, count($questions) - 1);
-    shuffle($indices);
+<?php
+include "questions.php";
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $answers = $_POST['answer'];
+    $name = $_POST['name'];
+    $username = $_POST['username'];
+    echo "<h1 class='name'>".$name." ".$username."</h1><br>";
+    
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -17,21 +22,22 @@
             <div><h3>Questions</h3></div>
             <div><h3>Answers</h3></div>
             <div><h3>Grade</h3></div>
+            <div><h3>Lecturer Answer</h3></div>
         </div>
-        <form action="grade.php" method="post">
+        <form action="grade1.php" method="post">
         <?php 
-       foreach ($indices as $index) {         
+        for ($i=0; $i < 5; $i++) {         
         echo "<div class='row'>
-        <div class='question'>{$questions[$index]['questions']}
-        </div>
-        <input type='text' name='answer[$index]' placeholder='answer'>
-        <div>{$questions[$index]['Grade']}</div>
+        <div class='question' >{$questions[$i]['questions']}</div>
+        <div>{$answers[$i]}</div>
+        <div class='question' >{$questions[$i]['Grade']}</div>
+        <input type='text' name='grade1[]' placeholder='grade'>
         </div>";
-    }
+        }
         ?>
 
         <div class="button">
-            Student
+            lecturer
             <input type="text" name="name" placeholder="Name">
             <input type="text" name="username" placeholder="Username">
             <button>Send</button>

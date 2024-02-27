@@ -7,9 +7,11 @@
     flex-direction: column;
     gap: 20px;
 }
+
 .row {
     display: flex;
     justify-content: space-evenly;
+    border-bottom: 1px solid black;
 }
 .button{
     text-align: center;
@@ -18,4 +20,11 @@ button{
     margin-top: 20px;
     height: 30px;
     width: 20%;
+}
+.question{
+    width: 150px;
+}
+.name {
+    text-align: center;
+    margin: auto;
 }
