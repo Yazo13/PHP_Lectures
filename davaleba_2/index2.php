@@ -23,16 +23,16 @@
     }
 
     // მატრიცის დაბეჭდვა
-    echo "<h2>Matrix:</h2>";
-    echo "<table border='1'>";
-    for ($i = 0; $i < 4; $i++) {
-        echo "<tr>";
-        for ($j = 0; $j < 4; $j++) {
-            echo "<td>" . $matrix[$i][$j] . "</td>";
+        echo "<h2>Matrix:</h2>";
+        echo "<table border='1'>";
+        for ($i = 0; $i < 4; $i++) {
+            echo "<tr>";
+            for ($j = 0; $j < 4; $j++) {
+                echo "<td>" . $matrix[$i][$j] . "</td>";
+            }
+            echo "</tr>";
         }
-        echo "</tr>";
-    }
-    echo "</table>";
+        echo "</table>";
 
 
 
