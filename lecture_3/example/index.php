@@ -1,8 +1,6 @@
 <?php 
     include("info.php");
     include "validation.php";
-    include "student.php";
-    include "manager.php";
 ?>
 
 <!DOCTYPE html>
@@ -14,6 +12,14 @@
     <title>Document</title>
 </head>
 <body>
+    <?php 
+        if(isset($_POST["student_submit"]) && $nameErr == "" && $lastnameErr == "" && $emailErr == ""){
+
+            include "manager.php";
+        }else{
+            include "student.php";
+        }
+    ?>
 
 
 </body>
