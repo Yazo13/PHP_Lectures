@@ -1,0 +1,30 @@
+form {
+    border: 1px solid silver;
+    border-radius: 15px;
+    padding: 10px;
+    width: 450px;
+    margin: auto;
+}
+form div {
+    margin: 10px;
+}
+.inp {
+    width: 80%;
+    padding: 10px;
+}
+.parent{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.error{
+    color: red;
+}
+.button{
+    margin: auto;
+    padding: 10px;
+    background-color: green;
+    color: white;
+    border-radius: 10px;
+    width: 80%;
+}
