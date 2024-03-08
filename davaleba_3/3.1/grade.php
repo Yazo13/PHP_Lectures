@@ -1,8 +1,8 @@
 <?php
     include "array_of_questions.php";
-    echo "<pre>";
-    echo print_r($_POST);
-    echo "</pre>"
+    // echo "<pre>";
+    // echo print_r($_POST);
+    // echo "</pre>"
 ?>
 <!DOCTYPE html>
 <html lang="en">
