@@ -2,7 +2,6 @@
     include("info.php");
     include "validation.php";
 
-    // Initialize variables to hold input values
     $nameValue = isset($_POST["name"]) ? $_POST["name"] : "";
     $lastnameValue = isset($_POST["lastname"]) ? $_POST["lastname"] : "";
     $emailValue = isset($_POST["email"]) ? $_POST["email"] : "";
