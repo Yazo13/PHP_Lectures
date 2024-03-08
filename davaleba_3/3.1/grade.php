@@ -27,8 +27,8 @@
             <?php
                 foreach($_POST['questions'] as $key => $question_data):
                     $question = $question_data['question'];
-                    $answer = $question_data['answer'];
                     $grade = $questions[$key]['grade'];
+                    $answer = isset($question_data['answer']) ? $question_data['answer'] : ''; // Check if answer key exists
             ?>
             <div class="row">
                 <div class="question"><?=$question?></div>

@@ -11,24 +11,29 @@
 .row{
     display: flex;
     justify-content: space-evenly;
+    align-items: center;
     border-bottom: solid 1px black;
     padding: 10px;
 }
 
 .row .question{
-    width: 35%;
+    width: 250px;
 }
-
+.row .input {
+    width: 200px;
+}
 .row .answer{
-    width: 25%;
+    width: 200px;
 }
-
+.options {
+    width: 200px;
+}
 .row .max-point{
-    width: 20%;
+    width: 200px;
 }
 
 .row .grade{
-    width: 20%;
+    width: 200px;
 }
 
 .button{
