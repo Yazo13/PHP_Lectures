@@ -1,8 +1,8 @@
 <?php
     include "array_of_questions.php";
     echo "<pre>";
-    print_r($_POST);
-    echo "</pre>";
+    echo print_r($_POST);
+    echo "</pre>"
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -25,27 +25,20 @@
         </div>
         <form action="grade.php" method="post">
             <?php
-                $i=0; 
-                foreach($questions as $item):
+                foreach($_POST['questions'] as $key => $question_data):
+                    $question = $question_data['question'];
+                    $answer = $question_data['answer'];
+                    $grade = $questions[$key]['grade'];
             ?>
             <div class="row">
-                <div class="question"><?=$item['question']?></div>
-                <div class="answer"><?=$_POST['answer'][$i]?></div>
-                <div class="max-point"><?=$item['grade']?></div>
+                <div class="question"><?=$question?></div>
+                <div class="answer"><?=$answer?></div>
+                <div class="max-point"><?=$grade?></div>
                 <div class="grade"><input type="text"></div>
             </div>
             <?php
-                $i++;
                 endforeach;
             ?>
-            <?php foreach ($OpenQuestions as $index => $_OpenQuestions) : ?>
-                <div class="row">
-                <div class="question"><?=$_OpenQuestions['question']?></div>
-                <div class="answer"><?=$_POST['OpenQAns'.$index][0]?></div>
-                <div class="max-point"><?=$item['grade']?></div>
-                <div class="grade"><input type="text"></div>
-            </div>
-            <?php endforeach; ?>
             <div class="button">
                 <label for="">Lecturer:</label>
                 <input type="text" placeholder="Name" name="name">
