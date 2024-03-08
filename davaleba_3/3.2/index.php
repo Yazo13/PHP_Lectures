@@ -1,6 +1,11 @@
 <?php 
     include("info.php");
     include "validation.php";
+
+    // Initialize variables to hold input values
+    $nameValue = isset($_POST["name"]) ? $_POST["name"] : "";
+    $lastnameValue = isset($_POST["lastname"]) ? $_POST["lastname"] : "";
+    $emailValue = isset($_POST["email"]) ? $_POST["email"] : "";
 ?>
 
 <!DOCTYPE html>
@@ -14,13 +19,10 @@
 <body>
     <?php 
         if(isset($_POST["student_submit"]) && $nameErr == "" && $lastnameErr == "" && $emailErr == ""){
-
             include "manager.php";
         }else{
             include "student.php";
         }
     ?>
-
-
 </body>
 </html>
