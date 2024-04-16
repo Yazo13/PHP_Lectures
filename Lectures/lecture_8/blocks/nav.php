@@ -1,3 +1,16 @@
+<?php 
+    $nav_q = "SELECT * FROM categorys";
+    $nav_result = mysqli_query($conn, $nav_q);
+    $navigation = mysqli_fetch_all($nav_result);
+
+
+    echo "<pre>";
+    print_r($navigation);
+    echo "</pre>";
+
+
+?>
+
 <nav>
     <ul>
         <li><a href="">Menu1</a></li>
