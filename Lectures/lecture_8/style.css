@@ -1,0 +1,42 @@
+*{
+
+}
+body{
+    background-color:  antiquewhite;
+    margin: 0;
+    padding: 0;
+}
+header, nav, main, footer{
+    width: 1290px;
+    border: 1px solid black;
+    margin: auto;
+    margin-bottom: 10px;
+    background-color: white;
+}
+header{
+    height: 100px;
+}
+nav{
+    min-height: 30px;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+}
+nav ul li{
+    list-style: none;
+    display: inline-block;
+}
+nav ul li a{
+    text-decoration: none;
+    padding: 10px;
+    display: block;
+}
+
+main{
+    min-height: 400px;
+}
+footer{
+    height: 50px;
+}
