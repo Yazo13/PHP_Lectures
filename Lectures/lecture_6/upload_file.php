@@ -1,8 +1,8 @@
 <?php
      if(isset($_POST['upload_file'])){
-        echo "<pre>";
-        print_r($_FILES);
-        echo "</pre>";
+      //   echo "<pre>";
+      //   print_r($_FILES);
+      //   echo "</pre>";
         $patch = "storage/".$_FILES['f_name']['name'];
         move_uploaded_file($_FILES['f_name']['tmp_name'], $patch);
      }
@@ -24,4 +24,3 @@
        rename($old_patch, $new_patch);
        header("location: index.php");
      }
-?>
