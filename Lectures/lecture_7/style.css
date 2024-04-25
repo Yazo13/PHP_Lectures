@@ -1,0 +1,23 @@
+nav{
+    padding: 10px;
+    width: 70%;
+    border: 1px solid black;
+    margin: auto;
+}
+nav ul{
+    margin: 0;
+    padding: 0;
+}
+nav ul li{
+    list-style: none;
+    display: inline-block;
+    margin-right:10px;
+}
+.home{
+    padding: 10px;
+    width: 70%;
+    border: 1px solid black;
+    margin: auto;
+    margin-top: 20px;
+    min-height: 300px;
+}

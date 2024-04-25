@@ -1,0 +1,76 @@
+header, main{
+    border: 1px solid black;
+    border-radius: 10px;
+    min-height: 100px;
+    width: 800px;
+    margin: 10px auto;
+    padding: 10px;
+    box-sizing: border-box;
+    box-shadow: -8px 7px 15px 0px;
+    font-size: 1.2em;
+    font-family: cursive, sans-serif
+}
+main {
+    min-height: 400px;
+    width: 70%;
+}
+header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+header div{
+    margin: 10px;
+    width: 45%;
+}
+header input {
+    border: 1px solid gray;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 16px;
+}
+.sybmit {
+    background-color: rgba(0, 200,0);
+    padding: 5px;
+    padding-left:10px; 
+    padding-right: 10px ;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    font-size: 16px;
+}
+span {
+    color: red;
+}
+.read, .modify, .rename, .delete, .addFile{
+    width: 100px;
+    background-color: rgba(0, 200,0);
+    border-radius: 10px;
+    outline: none;   
+    border: none; 
+    padding: 5px;
+
+}
+li{
+    width: 100%;
+    margin: 10px;
+}
+li form {
+    display: flex;
+    padding: 2px;
+}
+button:hover {
+    background-color: rgba(0, 255,0);
+    scale: 1.05;
+}
+button:active{
+    background-color: rgba(0, 100,0)
+}
+.input {
+    border-radius: 5px;
+    padding: 5px;
+    outline: none;
+    border: 1px solid gray;
+    margin-right: 20px;
+    font-size: 16px;
+}
