@@ -1,5 +1,5 @@
 <?php 
-    $nav_q = "SELECT * FROM products";
+    $nav_q = "SELECT * FROM categorys";
     $nav_result = mysqli_query($conn, $nav_q);
     $navigation = mysqli_fetch_all($nav_result);
 
