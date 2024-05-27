@@ -1,6 +1,6 @@
 <?php
 
-    $nav_q = "SELECT * FROM categorys";
+    $nav_q = "SELECT * FROM post";
     $nav_result = mysqli_query($conn, $nav_q);
     
     // echo "<pre>";
@@ -9,7 +9,7 @@
     
     if(isset($_GET['delete'])){
         $id = $_GET['delete'];
-        $nav_q = "DELETE FROM categorys Where id = $id";
+        $nav_q = "DELETE FROM post Where ID = $id";
         mysqli_query($conn, $nav_q);
         header("Location: ". $_SERVER['PHP_SELF']);
     };
@@ -28,8 +28,8 @@
         <thead>
             <th>ID</th>
             <th>Title</th>
-            <th>Description</th>
-            <th>Created At</th>
+            <th>Content</th>
+            <th>Date At</th>
             <th>Edit</th>
             <th>Delete</th>
         </thead>
@@ -38,12 +38,12 @@
             while($navigation = mysqli_fetch_assoc($nav_result)){
         ?>
         <tr>
-            <td style="padding: 10px; border: 1px dotted black;"><?= $navigation['id'] ?></td>
-            <td style="padding: 10px; border: 1px dotted black;"><?= $navigation['title'] ?></td>
-            <td style="padding: 10px; border: 1px dotted black;"><?= $navigation['description'] ?></td>
-            <td style="padding: 10px; border: 1px dotted black;"><?= $navigation['created_at'] ?></td>
-            <td style="padding: 10px; border: 1px dotted black;"><a href="?edit=<?= $navigation['id']?>">Edit</a></td>
-            <td style="padding: 10px; border: 1px dotted black;"><a href="?delete=<?= $navigation['id']?>">Delete</a></td>
+            <td style="padding: 10px; border: 1px dotted black;"><?= $navigation['ID'] ?></td>
+            <td style="padding: 10px; border: 1px dotted black;"><?= $navigation['Title'] ?></td>
+            <td style="padding: 10px; border: 1px dotted black;"><?= $navigation['Content'] ?></td>
+            <td style="padding: 10px; border: 1px dotted black;"><?= $navigation['date'] ?></td>
+            <td style="padding: 10px; border: 1px dotted black;"><a href="?edit=<?= $navigation['ID']?>">Edit</a></td>
+            <td style="padding: 10px; border: 1px dotted black;"><a href="?delete=<?= $navigation['ID']?>">Delete</a></td>
         </tr>
                 <?php } ?>
 
